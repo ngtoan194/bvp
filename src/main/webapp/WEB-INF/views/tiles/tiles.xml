@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+    <!-- Base Definition -->
+    <definition name="layout-template" template="/WEB-INF/views/tiles/layouts/LayoutTemplate.jsp">
+        <put-attribute name="title" value=""/>
+        <put-attribute name="fb:pages" value="136406996452077"/>
+        <put-attribute name="fb:app_id" value="398569107179016"/>
+        <put-attribute name="og:url" value=""/>
+        <put-attribute name="og:type" value="article"/>
+        <put-attribute name="og:title" value="BỆNH VIỆN PHỔI"/>
+        <put-attribute name="og:description" value=""/>
+        <put-attribute name="og:image" value=""/>
+        <put-attribute name="meta" value=""/>
+        <put-attribute name="body" value=""/>
+    </definition>
+    <definition name="layout-template-login" template="/WEB-INF/views/tiles/layouts/LayoutTemplateLogin.jsp">
+        <put-attribute name="title" value=""/>
+        <put-attribute name="fb:pages" value="136406996452077"/>
+        <put-attribute name="fb:app_id" value="398569107179016"/>
+        <put-attribute name="og:url" value=""/>
+        <put-attribute name="og:type" value="article"/>
+        <put-attribute name="og:title" value="BỆNH VIỆN PHỔI"/>
+        <put-attribute name="og:description" value=""/>
+        <put-attribute name="og:image" value=""/>
+        <put-attribute name="meta" value=""/>
+        <put-attribute name="body" value=""/>
+    </definition>
+    <definition name="layout-template-admin" template="/WEB-INF/views/tiles/layouts/LayoutTemplateAdmin.jsp">
+        <put-attribute name="title" value=""/>
+        <put-attribute name="fb:pages" value="136406996452077"/>
+        <put-attribute name="fb:app_id" value="398569107179016"/>
+        <put-attribute name="og:url" value=""/>
+        <put-attribute name="og:type" value="article"/>
+        <put-attribute name="og:title" value="BỆNH VIỆN PHỔI"/>
+        <put-attribute name="og:description" value=""/>
+        <put-attribute name="og:image" value=""/>
+        <put-attribute name="meta" value=""/>
+        <put-attribute name="body" value=""/>
+    </definition>
+    <definition name="layout-template-page" template="/WEB-INF/views/tiles/layouts/LayoutTemplatePage.jsp">
+        <put-attribute name="title" value=""/>
+        <put-attribute name="fb:pages" value="136406996452077"/>
+        <put-attribute name="fb:app_id" value="398569107179016"/>
+        <put-attribute name="og:url" value=""/>
+        <put-attribute name="og:type" value="article"/>
+        <put-attribute name="og:title" value="BỆNH VIỆN PHỔI"/>
+        <put-attribute name="og:description" value=""/>
+        <put-attribute name="og:image" value=""/>
+        <put-attribute name="meta" value=""/>
+        <put-attribute name="body" value=""/>
+    </definition>
+
+    <!-- Start user page -->
+    <definition name="home" extends="layout-template">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/user/home/home.jsp"/>
+    </definition>
+    <!-- Start User -->
+    <definition name="login" extends="layout-template-login">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/user/user/login.jsp"/>
+    </definition>
+    <definition name="register" extends="layout-template-login">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/user/user/register.jsp"/>
+    </definition>
+    <definition name="user-info" extends="layout-template">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/user/user/user-info.jsp"/>
+    </definition>
+    <definition name="doctor-info" extends="layout-template">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/user/user/doctor-info.jsp"/>
+    </definition>
+    <definition name="forgot-password" extends="layout-template-login">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/user/user/forgot-password.jsp"/>
+    </definition>
+    <definition name="recovery-pasword" extends="layout-template-login">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/user/user/recovery-pasword.jsp"/>
+    </definition>
+    <!-- Finish user -->
+
+    <definition name="news" extends="layout-template">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/user/news/news.jsp"/>
+    </definition>
+    <definition name="news-detail" extends="layout-template">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="og:title" expression="${pageTitle}"/>
+        <put-attribute name="og:url" expression="${pageLinkAlias}"/>
+        <put-attribute name="og:type" value="website"/>
+        <put-attribute name="og:description" expression="${pageContentPreview}"/>
+        <put-attribute name="og:image" expression="${pageImagePreview}"/>
+        <put-attribute name="og:image:type" value="image/jpeg"/>
+        <put-attribute name="og:image:width" value="600"/>
+        <put-attribute name="og:image:height" value="315"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/user/news/news-detail.jsp"/>
+    </definition>
+    <definition name="contribute" extends="layout-template">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/user/contribute/contribute.jsp"/>
+    </definition>
+    <definition name="contribute-detail" extends="layout-template">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/user/contribute/contribute-detail.jsp"/>
+    </definition>
+
+    <!-- course -->
+    <definition name="course" extends="layout-template">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/user/course/course.jsp"/>
+    </definition>
+    <!-- page 404 -->
+    <definition name="page404" extends="layout-template">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/user/error-page/page404.jsp"/>
+    </definition>
+    <definition name="updating-page" extends="layout-template">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/user/error-page/updating-page.jsp"/>
+    </definition>
+    <!-- online exchange -->
+    <definition name="online-exchange" extends="layout-template">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/user/online-exchange/online-exchange.jsp"/>
+    </definition>
+    <definition name="online-exchange-detail" extends="layout-template">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/user/online-exchange/online-exchange-detail.jsp"/>
+    </definition>
+    <!-- album -->
+    <definition name="album" extends="layout-template">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/user/album/album.jsp"/>
+    </definition>
+    <definition name="album-detail" extends="layout-template">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/user/album/album-detail.jsp"/>
+    </definition>
+    <!-- document -->
+    <definition name="document" extends="layout-template">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/user/document/document.jsp"/>
+    </definition>
+    <definition name="text" extends="layout-template">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/user/document/text.jsp"/>
+    </definition>
+    <definition name="document-detail" extends="layout-template">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/user/document/document-detail.jsp"/>
+    </definition>
+    <!-- page -->
+    <definition name="page-detail" extends="layout-template">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/user/page/page-detail.jsp"/>
+    </definition>
+    <!-- page department -->
+    <definition name="page-department-detail" extends="layout-template-page">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/user/page/page-department-detail.jsp"/>
+    </definition>
+    <definition name="page-introduce" extends="layout-template-page">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/user/page/page-introduce.jsp"/>
+    </definition>
+    <definition name="page-leader" extends="layout-template-page">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/user/page/page-leader.jsp"/>
+    </definition>
+    <definition name="page-news" extends="layout-template-page">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/user/page/page-news.jsp"/>
+    </definition>
+    <definition name="page-album" extends="layout-template-page">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/user/page/page-album.jsp"/>
+    </definition>
+    <definition name="page-news-detail" extends="layout-template-page">
+        <put-attribute name="og:url" expression="${pageLinkAlias}"/>
+        <put-attribute name="og:type" value="website"/>
+        <put-attribute name="og:title" expression="${pageTitle}"/>
+        <put-attribute name="og:description" expression="${pageContentPreview}"/>
+        <put-attribute name="og:image" expression="${pageImagePreview}"/>
+        <put-attribute name="og:image:type" value="image/jpeg"/>
+        <put-attribute name="og:image:width" value="600"/>
+        <put-attribute name="og:image:height" value="315"/>
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/user/page/page-news-detail.jsp"/>
+    </definition>
+    <definition name="page-album-detail" extends="layout-template-page">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/user/page/page-album-detail.jsp"/>
+    </definition>
+    <definition name="user-page" extends="layout-template-page">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/user/page/mgr-page.jsp"/>
+    </definition>
+    <definition name="user-page-news" extends="layout-template-page">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/user/page/mgr-news.jsp"/>
+    </definition>
+    <definition name="user-page-album" extends="layout-template-page">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/user/page/mgr-album.jsp"/>
+    </definition>
+    <!-- post -->
+    <definition name="layout-list-post" extends="layout-template">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/user/posts/layout-list-post.jsp"/>
+    </definition>
+    <definition name="search-post" extends="layout-template">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/user/posts/search-post.jsp"/>
+    </definition>
+    <definition name="create-post" extends="layout-template">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/user/posts/create-post.jsp"/>
+    </definition>
+    <definition name="post-detail" extends="layout-template">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/user/posts/post-detail.jsp"/>
+    </definition>
+    <!-- tag -->
+    <definition name="tags" extends="layout-template">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/user/tag/tags.jsp"/>
+    </definition>
+    <!-- video -->
+    <definition name="video" extends="layout-template">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/user/video/video.jsp"/>
+    </definition>
+    <definition name="video-detail" extends="layout-template">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/user/video/video-detail.jsp"/>
+    </definition>
+    <!-- lien he -->
+    <definition name="lien-he" extends="layout-template">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/user/about/lien-he.jsp"/>
+    </definition>
+    <!-- Finish user page -->
+
+
+    <!-- Start admin page -->
+    <!-- admin home page -->
+    <definition name="admin-home" extends="layout-template-admin">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/admin/home/home.jsp"/>
+    </definition>
+    <!-- template table -->
+    <definition name="admin-table" extends="layout-template-admin">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/admin/table/table.jsp"/>
+    </definition>
+    <definition name="admin-form" extends="layout-template-admin">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/admin/form/form.jsp"/>
+    </definition>
+    <!-- mgr menu -->
+    <definition name="admin-menu" extends="layout-template-admin">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/admin/menu/mgr-menu.jsp"/>
+    </definition>
+    <definition name="admin-submenu" extends="layout-template-admin">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/admin/menu/mgr-submenu.jsp"/>
+    </definition>
+    <definition name="admin-submenu2" extends="layout-template-admin">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/admin/menu/mgr-submenu2.jsp"/>
+    </definition>
+    <!-- mgr news -->
+    <definition name="admin-news" extends="layout-template-admin">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/admin/news/mgr-news.jsp"/>
+    </definition>
+    <definition name="admin-add-news" extends="layout-template-admin">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/admin/news/mgr-add-news.jsp"/>
+    </definition>
+    <definition name="admin-news-hoi-lao" extends="layout-template-admin">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/admin/news/mgr-news-hoi-lao.jsp"/>
+    </definition>
+    <!-- mgr user -->
+    <definition name="admin-user" extends="layout-template-admin">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/admin/user/mgr-user.jsp"/>
+    </definition>
+    <definition name="admin-doctor" extends="layout-template-admin">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/admin/user/mgr-doctor.jsp"/>
+    </definition>
+    <definition name="admin-position" extends="layout-template-admin">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/admin/user/mgr-position.jsp"/>
+    </definition>
+    <definition name="admin-admin" extends="layout-template-admin">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/admin/user/mgr-admin.jsp"/>
+    </definition>
+    <!-- mgr tag -->
+    <definition name="admin-tag" extends="layout-template-admin">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/admin/tag/mgr-tag.jsp"/>
+    </definition>
+    <!-- mgr contribute -->
+    <definition name="mgr-contribute" extends="layout-template-admin">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/admin/contribute/mgr-contribute.jsp"/>
+    </definition>
+    <definition name="mgr-add-contribute" extends="layout-template-admin">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/admin/contribute/mgr-add-contribute.jsp"/>
+    </definition>
+    <!-- mgr webLink -->
+    <definition name="mgr-web-link" extends="layout-template-admin">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/admin/web-link/mgr-web-link.jsp"/>
+    </definition>
+    <!-- mgr dictionary -->
+    <definition name="admin-dictionary" extends="layout-template-admin">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/admin/dictionary/mgr-dictionary.jsp"/>
+    </definition>
+    <!-- mgr Slide item -->
+    <definition name="mgr-slide-item" extends="layout-template-admin">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/admin/slide/mgr-slide-item.jsp"/>
+    </definition>
+    <definition name="mgr-slide" extends="layout-template-admin">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/admin/slide/mgr-slide.jsp"/>
+    </definition>
+    <definition name="mgr-slide-place" extends="layout-template-admin">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/admin/slide/mgr-slide-place.jsp"/>
+    </definition>
+    <!-- mgr page -->
+    <definition name="mgr-page" extends="layout-template-admin">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/admin/page/mgr-page.jsp"/>
+    </definition>
+    <definition name="mgr-add-page-type-news" extends="layout-template-admin">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/admin/page/mgr-add-page-type-news.jsp"/>
+    </definition>
+    <definition name="mgr-add-page" extends="layout-template-admin">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/admin/page/mgr-add-page.jsp"/>
+    </definition>
+    <definition name="mgr-page-news" extends="layout-template-admin">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/admin/page/mgr-news.jsp"/>
+    </definition>
+    <definition name="mgr-page-album" extends="layout-template-admin">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/admin/page/mgr-album.jsp"/>
+    </definition>
+    <!-- mgr webLink -->
+    <definition name="admin-hospital-utility" extends="layout-template-admin">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/admin/hospital-utility/mgr-hospital-utility.jsp"/>
+    </definition>
+    <!-- mgr course -->
+    <definition name="admin-course" extends="layout-template-admin">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/admin/course/mgr-course.jsp"/>
+    </definition>
+    <!-- mgr course item -->
+    <definition name="admin-course-item" extends="layout-template-admin">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/admin/course/mgr-course-item.jsp"/>
+    </definition>
+    <!-- mgr online exchange -->
+    <definition name="admin-online-exchange" extends="layout-template-admin">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/admin/online-exchange/mgr-online-exchange.jsp"/>
+    </definition>
+    <definition name="admin-online-exchange-question" extends="layout-template-admin">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/admin/online-exchange/mgr-online-exchange-question.jsp"/>
+    </definition>
+    <!-- mgr video -->
+    <definition name="admin-video" extends="layout-template-admin">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/admin/video/mgr-video.jsp"/>
+    </definition>
+    <!-- mgr album -->
+    <definition name="admin-album" extends="layout-template-admin">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/admin/album/mgr-album.jsp"/>
+    </definition>
+    <!-- mgr album -->
+    <definition name="admin-document" extends="layout-template-admin">
+        <put-attribute name="title" expression="${pageTitle}"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/admin/document/mgr-document.jsp"/>
+    </definition>
+    <!-- Finish admin page -->
+</tiles-definitions>

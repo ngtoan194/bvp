@@ -1,0 +1,8 @@
+# bvp_test
+echo "merge" + $1;
+git merge bvp_test;
+echo "merge";
+git pull origin bvp_release --rebase
+echo "pull release"
+git push origin bvp_release
+curl -I -X POST http://admi	n:4cfc90785b667885ba48a1f2e58afa6d@jenkins.test.congdongyte.vn:8088/job/bvp_upgrade_web_test/build
